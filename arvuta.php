@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="style.css">
+<nav>
+    <a href="AndmetTabelist.php">Sorditud vanuse jargi</a>
+    <a href="mass200-500.php">Sorditud vanuse jargi</a>
+    <a href="AndmeteLisamine.php">Lisa andmet tabelisse</a>
+    <a href="arvuta.php">Õppepäeva Kalkulaator</a>
+    <a href="https://github.com/VladEm99/kontrolltoo-VladEm">Git HUB</a>
+</nav>
+<br>
 <?php
 $today = date('Y-m-d H:i:s');
 $now = time(); // текущее время

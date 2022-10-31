@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
 require_once ('conf.php');
 global $yhendus;
@@ -22,7 +23,9 @@ if(isset($_REQUEST['kustuta'])) {
 <nav>
     <a href="AndmetTabelist.php">Sorditud vanuse jargi</a>
     <a href="mass200-500.php">Sorditud vanuse jargi</a>
-    <a href="https://github.com/VladEm99/laululeht-main-V1">Git HUB</a>
+    <a href="AndmeteLisamine.php">Lisa andmet tabelisse</a>
+    <a href="arvuta.php">Õppepäeva Kalkulaator</a>
+    <a href="https://github.com/VladEm99/kontrolltoo-VladEm">Git HUB</a>
 </nav>
 <br>
 
@@ -38,8 +41,8 @@ if(isset($_REQUEST['kustuta'])) {
     </tr>
     <?php
     // tabeli sisu näitamine
-    $kask=$yhendus->prepare('SELECT id, veisenimi, mass, vanus FROM veised ORDER BY vanus');
-    $kask->bind_result($id, $veisenimi, $mass, $vanus);
+    $kask=$yhendus->prepare('SELECT id, veisenimi, mass, vanus, url FROM veised ORDER BY vanus');
+    $kask->bind_result($id, $veisenimi, $mass, $vanus, $url);
     $kask->execute();
     while($kask->fetch()){
         $seisund="Peidetud";
@@ -51,6 +54,7 @@ if(isset($_REQUEST['kustuta'])) {
         echo "<td>".htmlspecialchars($veisenimi)."</td>";
         echo "<td>$mass</td>";
         echo "<td>$vanus</td>";
+        echo "<td>$url</td>";
         echo "<td></td>";
         echo "</tr>";
 

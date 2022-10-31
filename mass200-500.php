@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
 require_once ('conf.php');
 global $yhendus;
@@ -21,8 +22,10 @@ if(isset($_REQUEST['kustuta'])) {
 <h1>Veisede andmet</h1>
 <nav>
     <a href="AndmetTabelist.php">Sorditud vanuse jargi</a>
-    <a href="AndmetTabelist.php">Sorditud vanuse jargi</a>
-    <a href="https://github.com/VladEm99/laululeht-main-V1">Git HUB</a>
+    <a href="mass200-500.php">Ainult 200-500 kg</a>
+    <a href="AndmeteLisamine.php">Lisa andmet tabelisse</a>
+    <a href="arvuta.php">Õppepäeva Kalkulaator</a>
+    <a href="https://github.com/VladEm99/kontrolltoo-VladEm">Git HUB</a>
 </nav>
 <br>
 
